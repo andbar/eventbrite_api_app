@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <div style="margin: 20px 20px 20px 20px"><h4 style="color: blue">{{ message }}</h4>
+        <form action="/">
+            <input type="text" name="category"/>
+            <input type="submit" />
+        </form>
+    </div>
+    <div style="margin: 20px 20px 20px 20px">
+        {% for event in context %}
+            <p><strong>Event:</strong> <a href="{% url 'event_details' event.id %}">{{ event.name }}</a></p>
+        {% endfor %}
+    </div>
+{% endblock %}

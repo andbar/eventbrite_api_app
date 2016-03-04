@@ -1,0 +1,10 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <h3>Location:</h3>
+    <p>{{ city }}, {{ state }} ({{ country }})</p>
+    <h3>Description:</h3>
+    {% autoescape off %}
+        {{ description }}
+    {% endautoescape %}
+{% endblock %}
